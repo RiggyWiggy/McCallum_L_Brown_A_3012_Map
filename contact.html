@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chantry Island</title>
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/app.css" />
+<link rel="stylesheet" href="css/map.css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CLora:400,700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQI7yeKPLzF_QoytKgKNHlDS9TP11pwQ8"></script>
+</head>
+<body>
+<h1 class="hide">Chantry Island</h1>
+<header id="topNav">
+  <section class="row">
+    <h2 class="hide">Navigation Container</h2>
+    <nav class="small-12 large-8 columns large-push-2 end">
+      <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+        <h2 class="hide">Main Navigation</h2>
+        <button class="menu-icon float-right" type="button" data-toggle> </button>
+      </div>
+      <div id="main-menu">
+        <div class="small-8 small-centered columns"> <a href="index.html"><img src="images/logo.svg" alt="logo" id="logo"></a> </div>
+        <ul id="menuLinks">
+          <li><a href="about.html">About</a></li>
+          <li><a href="newsandevents.html">News & Events</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.php">Gallery</a></li>
+          <li><a href="donate.html">Donations</a></li>
+          <li><a href="volunteers.html">Volunteers</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="small-12 large-1 large-offset-1 columns large-pull-10"> <a href="index.html"><img src="images/logo.svg" alt="logo" id="logoDesktop"></a> </div>
+  </section>
+</header>
+<section class="row">
+  <div class="small-12 large-12 large-centered text-center columns">
+    <h2 class="text-center topHeader">Contact Us</h2>
+    <p>Have a question or comment? Feel free to contact us!</p>
+  </div>
+</section>
+<section class="contact">
+  <h2 class="hide">Contact Container</h2>
+  <section class="row">
+    <div class="small-12 large-5 large-offset-1 columns">
+      <h2 class="hide">Contact Info Box</h2>
+      <div class="infoBox infoBoxBold">
+        <ul>
+          <li class="contactInfoBold">By Phone</li>
+          <li><a href="tel:+519-797-5862">Call: 519-797-5862</a></li>
+          <li><a href="tel:+1-866-797-5862">Toll Free: 1-866-797-5862</a></li>
+        </ul>
+        <ul>
+          <li class="contactInfoBold">By Mail</li>
+          <li>Marine Heritage Society</li>
+          <li>86 Saugeen Street</li>
+          <li>Southampton, Ontario</li>
+          <li>Canada, N0H 2L0</li>
+        </ul>
+        <ul id="contactSocial">
+          <li class="contactInfoBold">By Social Media</li>
+        </ul>
+        <div class="contactSocial">
+          <ul>
+            <li><a href="http://www.facebook.com/MarineHeritageSociety"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="http://www.youtube.com/channel/UC5BwiLq9hSIl9BZRq7Q4UNA?feature=watch"><img src="images/youtube.svg" alt="Youtube"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="small-12 large-5 columns end" id="message">
+      <section id="form" class="infoBox">
+        <h2 id="formHeader">By Contact Form</h2>
+        <form id="contactForm" action="form.php" method="post">
+          <label for="name" class="text-left">Name</label>
+          <input type="text" required id="name" placeholder="Required">
+          <label for="email" class="text-left">E-mail</label>
+          <input type="email" required id="email" placeholder="Required">
+          <label for="comment"  class="text-left">Comment</label>
+          <textarea id="comment" required placeholder="Required" cols="50" rows="8"></textarea>
+          <input id="submit" type="submit" value="Submit">
+        </form>
+      </section>
+    </div>
+  </section>
+  <section class="row">
+    <div class="small-centered divider">
+      <h3 class="hide">Divider</h3>
+      <img src="images/divider.svg" alt="divider"> </div>
+  </section>
+  <section class="row">
+    <div class="small-12 large-10 large-centered columns">
+      <h2 class="text-center headerCenter">Location & Directions</h2>
+      <h3>Our Location</h3>
+      <p>Chantry Island is located at 86 Saugeen Street, Southampton, Ontario, Canada N0H 2L0.</p>
+      <h3>Directions</h3>
+      <p>From Highway 21 in Southampton, turn west on Clarendon and follow the signs, or From High Street, (the main street), turn north on Huron or Grosvenor Street and look for the signs. Use the map below to find how to reach us from your current location.</p>
+    </div>
+  </section>
+  <!--Google Maps API-->
+  <section id="map">
+    <h3 class="text-center headerCenter">Map</h3>
+    <div class="preload-wrapper"> <i class="fa fa-spinner fa-spin"></i> <span>Loading map, please wait...</span> </div>
+    <div class="map-container"></div>
+    <div id="directionBox"> </div>
+  </section>
+  <!--Google Maps API END-->
+  
+  <section class="row">
+    <div class="small-4 small-centered large-2 large-centered columns mapUp" id="arrow">
+      <h4 class="hide">Back to Top</h4>
+      <a href="#"><img src="images/arrow.svg" alt="Up Arrow"></a> </div>
+  </section>
+  <section class="row">
+    <div class="small-12 large-12 large-centered columns" id="backToTop">
+      <h4 class="hide">Back to Top</h4>
+      <a href="#">Back To Top</a> </div>
+  </section>
+</section>
+<footer id="footerCon">
+  <section class="row">
+    <div class="small-12 large-4 columns">
+      <h4>Sitemap</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="newsandevents.html">News & Events</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.php">Gallery</a></li>
+        <li><a href="donate.html">Donations</a></li>
+        <li><a href="volunteers.html">Volunteers</a></li>
+      </ul>
+      <br>
+      <h4>Connect</h4>
+      <div class="footerSocial">
+        <ul>
+          <li><a href="contact.html#message"><img src="images/email.svg" alt="E-mail"></a></li>
+          <li><a href="http://www.facebook.com/MarineHeritageSociety"><img src="images/facebook.png" alt="Facebook"></a></li>
+          <li><a href="http://www.youtube.com/channel/UC5BwiLq9hSIl9BZRq7Q4UNA?feature=watch"><img src="images/youtube.svg" alt="Youtube"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="small-12 large-4 columns">
+      <h4>Contact Us</h4>
+      <ul>
+        <li class="footerContact">By Phone</li>
+        <li><a href="tel:+519-797-5862">Call: 519-797-5862</a></li>
+        <li><a href="tel:+1-866-797-5862">Toll Free: 1-866-797-5862</a></li>
+      </ul>
+      <ul>
+        <li class="footerContact">By Mail</li>
+        <li>Marine Heritage Society</li>
+        <li>86 Saugeen Street</li>
+        <li>Southampton, Ontario</li>
+        <li>Canada, N0H 2L0</li>
+      </ul>
+    </div>
+    <div class="small-12 large-4 columns">
+      <h4>Other Attractions</h4>
+      <ul>
+        <li><a href="http://www.saugeenshores.ca/">Saugeen Shores</a></li>
+        <li><a href="http://www.brucemuseum.ca/">Bruce County Museum & Cultural Centre</a></li>
+        <li><a href="http://www.brucecoastlighthouses.com/">Bruce Coast Lighthouse Tour</a></li>
+        <li><a href="http://www.explorethebruce.com/">Explore the Bruce</a></li>
+        <li><a href="http://www.southamptontennisclub.ca/">Southampton Tennis Club</a></li>
+      </ul>
+      <div>
+        <h4>Sign-In</h4>
+        <ul>
+          <li><a href="http://www.chantryisland.com/MHS_admin.php" id="admin">Administrative Sign-In</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div id="bottomBar" class="text-center">MARINE HERITAGE SOCIETY © 2017</div>
+</footer>
+<script src="js/vendor/jquery.min.js"></script> 
+<script src="js/vendor/what-input.min.js"></script> 
+<script src="js/foundation.min.js"></script> 
+<script src="js/app.js"></script> 
+<script src="js/map.js"></script>
+</body>
+</html>
